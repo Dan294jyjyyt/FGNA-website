@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FGNA – Federal Gang & Narcotics Agency</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root{--fgna-blue:#0d1b2a;--fgna-gold:#d4af37;--fgna-light:#e9ecef;}
+    *{box-sizing:border-box;}body{margin:0;font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif;background:var(--fgna-light);color:#111;}
+    header{background:var(--fgna-blue);color:#000;padding:16px 32px;display:flex;align-items:center;box-shadow:0 2px 6px rgba(0,0,0,.4);}
+    header img{height:60px;filter:drop-shadow(0 0 3px rgba(0,0,0,.6));}
+    header h1{margin:0 0 0 16px;font-size:24px;text-transform:uppercase;letter-spacing:1px;font-weight:600;}
+    nav{background:#132238;display:flex;justify-content:center;padding:10px;}
+    nav a{color:#000;margin:0 14px;text-decoration:none;font-weight:600;font-size:15px;position:relative;}
+    nav a::after{content:'';position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--fgna-gold);transition:.3s ease;}
+    nav a:hover::after{width:100%;}
+    .slideshow-container{position:relative;width:100%;overflow:hidden;}
+    .slide{display:none;width:100%;height:calc(100vh - 140px);padding:60px 20px;color:#000;position:relative;}
+    .slide-active{display:block;animation:fade .8s;}@keyframes fade{from{opacity:.3;}to{opacity:1;}}
+    .hero{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:24px;}
+    .hero h2{font-size:48px;margin:0;text-shadow:0 3px 6px rgba(0,0,0,.5);}
+    .btn{background:var(--fgna-gold);color:#000;border:none;padding:14px 28px;font-size:16px;font-weight:700;border-radius:6px;cursor:pointer;transition:.2s ease;}
+    .btn:hover{transform:translateY(-3px);}
+    .card-grid{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;}
+    .card{background:#fff;color:#000;border-left:6px solid var(--fgna-blue);padding:20px;border-radius:8px;min-width:260px;box-shadow:0 2px 8px rgba(0,0,0,.15);flex:1;}
+    footer{background:var(--fgna-blue);color:#ccc;text-align:center;padding:20px 0;font-size:14px;}
+    a.doc-link{color:var(--fgna-gold);}
+    textarea{width:100%;height:250px;font-size:16px;padding:10px;border:1px solid #ccc;border-radius:6px;}
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="FGNA-logo.jpeg" alt="FGNA Badge">
+  <h1>Federal Gang & Narcotics Agency</h1>
+</header>
+
+<nav>
+  <a href="javascript:void(0)" onclick="showSlide(1)">Home</a>
+  <a href="javascript:void(0)" onclick="showSlide(2)">Divisions</a>
+  <a href="javascript:void(0)" onclick="showSlide(3)">Documents</a>
+  <a href="javascript:void(0)" onclick="showSlide(4)">COC</a>
+</nav>
+
+<div class="slideshow-container">
+
+  <!-- Slide 1 -->
+  <section class="slide slide-active" id="slide1" style="background:url('slide1.jpg') center/cover no-repeat; overflow-y:auto;">
+    <div class="hero" style="max-width:900px;margin:auto;gap:30px;">
+      <h2>Federal Gang & Narcotics Agency (FGNA)</h2>
+      <p style="font-size:18px;">
+        The Federal Gang & Narcotics Agency (FGNA) is a premier federal law enforcement agency dedicated to combating violent criminal organizations involved in narcotics trafficking and organized crime. FGNA focuses on dismantling the operations of the Madrazo Cartel (MC), the Ruskova Federation (RF)&mdash;a Russian organized crime syndicate&mdash;and the street gangs Prophet$ and the Ballas.
+      </p>
+
+      <h3 style="font-size:24px;margin-bottom:0;">Mission Overview</h3>
+      <p style="font-size:18px;">
+        FGNA&rsquo;s mission is to safeguard communities and uphold public safety by disrupting and dismantling criminal networks engaged in drug trafficking, violent crime, and territorial control. Through intelligence-driven enforcement and coordinated multi-jurisdictional operations, FGNA targets criminal leadership, disrupts illicit supply chains, and weakens street-level organizations.
+      </p>
+
+      <h3 style="font-size:24px;margin-bottom:0;">Key Operational Focus</h3>
+      <ul style="text-align:left;font-size:18px;max-width:800px;">
+        <li><strong>Madrazo Cartel (MC):</strong> A powerful narcotics cartel dominating international drug trafficking routes and employing violence and intimidation to maintain control.</li>
+        <li><strong>Ruskova Federation (RF):</strong> A sophisticated Russian organized crime group engaged in narcotics distribution, arms trafficking, and complex criminal enterprises.</li>
+        <li><strong>Prophet$ and the Ballas:</strong> Notorious street gangs controlling key urban territories, deeply involved in drug trafficking, racketeering, and violent crime.</li>
+      </ul>
+
+      <textarea style="width:100%;height:300px;font-size:16px;padding:10px;border:1px solid #ccc;border-radius:6px;">Federal Gang & Narcotics Agency (FGNA)...</textarea><button class="btn" onclick="showSlide(2)">View Our Divisions</button>
+    </div>
+  </section>
+
+  <!-- Slide 2 – Divisions -->
+  <section class="slide" id="slide2" style="background:#0d1b2ae6;">
+    <div class="hero" style="gap:40px;">
+      <h2>Operational Divisions</h2>
+      <div class="card-grid">
+        <div class="card"><h3>ACU – Air Coastal Unit</h3><p>Undercover ops & narcotics enforcement.</p></div>
+        <div class="card"><h3>GIU – Gang Investigations Unit</h3><p>Surveillance & gang takedown operations.</p></div>
+        <div class="card"><h3>S.E.R.T – Special Emergency Response Team</h3><p>High‑risk raids & tactical interventions.</p></div>
+        <div class="card"><h3>K9 Unit</h3><p>Narcotics detection, tracking & apprehension.</p></div>
+      </div>
+      <textarea style="width:100%;height:300px;font-size:16px;padding:10px;border:1px solid #ccc;border-radius:6px;">ACU – Air Coastal Unit
+GIU – Gang Investigations Unit
+S.E.R.T – Special Emergency Response Team
+K9 Unit</textarea><button class="btn" onclick="showSlide(3)">Next: Documents</button>
+    </div>
+  </section>
+
+  <!-- Slide 3 – Documents -->
+  <section class="slide" id="slide3" style="background:#132238e6;">
+    <div class="hero" style="gap:30px;padding:20px;">
+      <h2>Documents & Resources</h2>
+      <div style="background:#fff;color:#000;padding:20px;border-radius:10px;max-width:800px;width:100%;">
+        <ul style="list-style:none;padding:0;font-size:18px;">
+          <li><a class="doc-link" href="FGNA_SOP_2025.pdf" target="_blank">📝 Standard Operating Procedures 2025</a></li>
+          <li><a class="doc-link" href="FGNA_Field_Manual.pdf" target="_blank">📘 Field Manual</a></li>
+          <li><a class="doc-link" href="FGNA_Join_Application.pdf" target="_blank">📄 Recruitment Application</a></li>
+        </ul>
+      </div>
+      <textarea style="width:100%;height:300px;font-size:16px;padding:10px;border:1px solid #ccc;border-radius:6px;">📝 Standard Operating Procedures 2025
+📘 Field Manual
+📄 Recruitment Application</textarea><button class="btn" onclick="showSlide(4)">Next: Chain of Command</button>
+    </div>
+  </section>
+
+  <!-- Slide 4 – Chain of Command -->
+  <section class="slide" id="slide4" style="background:#0d1b2ae6;">
+    <div class="hero" style="gap:30px;max-width:900px;margin:auto;">
+      <h2>High Command (Editable)</h2>
+      <textarea id="rosterEditor">
+01. James E. – Director
+02. N/A – Deputy Director
+03. N/A – Assistant Director
+04. N/A – Executive Director
+05. S. Chase – Chief Of Staff
+      </textarea>
+      <h2>Chain of Command</h2>
+      <div class="card-grid" id="cocContainer">
+        <!-- cards generated by script -->
+      </div>
+      <button class="btn" onclick="showSlide(1)">Return Home</button>
+    </div>
+  </section>
+
+</div>
+
+<footer>&copy; 2025 Federal Gang & Narcotics Agency (FGNA). All rights reserved.</footer>
+
+<script>
+  const slides=document.querySelectorAll('.slide');let current=0;
+  function showSlide(n){slides[current].classList.remove('slide-active');current=(n-1+slides.length)%slides.length;slides[current].classList.add('slide-active');}
+
+  const rosterTextarea=document.getElementById('rosterEditor');
+  const cocContainer=document.getElementById('cocContainer');
+
+  function renderCOC(){
+    const lines=rosterTextarea.value.split('\n').filter(l=>l.trim());
+    cocContainer.innerHTML='';
+    lines.forEach(line=>{
+      const parts=line.split('–');
+      if(parts.length<2) return;
+      const numAndName=parts[0].trim();
+      const role=parts[1].trim();
+      const card=document.createElement('div');
+      card.className='card';
+      card.innerHTML='<h3>'+numAndName+'</h3><p>'+role+'</p>';
+      cocContainer.appendChild(card);
+    });
+  }
+  rosterTextarea.addEventListener('input',renderCOC);
+  renderCOC();
+</script>
+
+</body>
+</html>
