@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FGNA Website</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body, html { height: 100%; scroll-behavior: smooth; }
+
+    section {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #001f3f;
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background-color: #004080;
+    }
+
+    .slide1 { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('your-dept-banner.jpg') center/cover no-repeat; }
+    .slide2 { background-color: #00274D; }
+    .slide3 { background-color: #003366; }
+    .slide4 { background-color: #001f3f; }
+    .slide5 { background-color: #000f20; }
+
+    .division-card, .doc-link, .coc-card {
+      background: #004080;
+      border: 1px solid #0055aa;
+      padding: 1rem;
+      margin: 1rem;
+      border-radius: 10px;
+      max-width: 300px;
+      color: white;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    h1, h2 { margin-bottom: 1rem; }
+
+    a.button {
+      background: #ffaa00;
+      padding: 10px 20px;
+      border-radius: 5px;
+      display: inline-block;
+      color: black;
+      text-decoration: none;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#divisions">Divisions</a>
+    <a href="#docs">Documents</a>
+    <a href="#coc">Chain of Command</a>
+    <a href="#retired">Retired</a>
+  </nav>
+
+  <!-- Slide 1: Home -->
+  <section id="home" class="slide1">
+    <img src="FGNA-logo.png" alt="FGNA Logo" width="120" style="margin-bottom: 20px;">
+    <h1>Federal Gang & Narcotics Agency (FGNA)</h1>
+    <p>“Protecting Our Communities from Organized Crime”</p>
+  </section>
+
+  <!-- Slide 2: Divisions -->
+  <section id="divisions" class="slide2">
+    <h2>Our Divisions</h2>
+    <div class="flex-container">
+      <div class="division-card">
+        <h3>S.E.R.T</h3>
+        <p>Special Emergency Response Team</p>
+      </div>
+      <div class="division-card">
+        <h3>G.I.U</h3>
+        <p>Gang Investigations Unit</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 3: Documents -->
+  <section id="docs" class="slide3">
+    <h2>Official Documents</h2>
+    <div class="flex-container">
+      <div class="doc-link">
+        <h3>Code of Conduct</h3>
+        <a class="button" href="docs/Code-of-Conduct.pdf" target="_blank">View</a>
+      </div>
+      <div class="doc-link">
+        <h3>Operations Manual</h3>
+        <a class="button" href="docs/Operations-Manual.pdf" target="_blank">View</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 4: Chain of Command -->
+  <section id="coc" class="slide4">
+    <h2>Chain of Command</h2>
+    <div class="flex-container">
+      <div class="coc-card">
+        <h3>Director James E</h3>
+        <p>Agency Director</p>
+      </div>
+      <div class="coc-card">
+        <h3>Deputy Director</h3>
+        <p><em>Position Vacant</em></p>
+      </div>
+      <div class="coc-card">
+        <h3>Assistant Director</h3>
+        <p><em>Position Vacant</em></p>
+      </div>
+      <div class="coc-card">
+        <h3>Executive Director</h3>
+        <p><em>Position Vacant</em></p>
+      </div>
+      <div class="coc-card">
+        <h3>Chief of Staff S. Chase</h3>
+        <p>Chief of Staff</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 5: Retired Command -->
+  <section id="retired" class="slide5">
+    <h2>Retired Command</h2>
+    <div class="flex-container">
+      <div class="coc-card">
+        <h3>Rt. Director John M</h3>
+        <p>Former Agency Director</p>
+      </div>
+      <div class="coc-card">
+        <h3>Rt. Assistant Director W. Dan</h3>
+        <p>Former Assistant Director</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
