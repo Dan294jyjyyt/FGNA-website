@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FGNA – Federal Gang & Narcotics Agency</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --fgna-blue: #0b1e3f;
+      --fgna-gold: #c9aa5f;
+      --fgna-gray: #f5f5f5;
+      --fgna-dark: #111;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--fgna-gray);
+      color: var(--fgna-dark);
+    }
+    header {
+      background: var(--fgna-blue);
+      color: white;
+      padding: 16px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    }
+    header img {
+      height: 60px;
+    }
+    header h1 {
+      margin: 0 0 0 16px;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    nav {
+      background: #08213c;
+      display: flex;
+      justify-content: center;
+      padding: 12px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 20px;
+      text-transform: uppercase;
+      font-size: 14px;
+      position: relative;
+    }
+    nav a:hover {
+      color: var(--fgna-gold);
+    }
+    .slideshow-container {
+      width: 100%;
+      height: calc(100vh - 140px);
+      position: relative;
+      overflow: hidden;
+    }
+    .slide {
+      display: none;
+      width: 100%;
+      height: 100%;
+      padding: 60px 20px;
+      color: white;
+      position: relative;
+    }
+    .slide-active {
+      display: block;
+      animation: fade 0.8s ease-in-out;
+    }
+    @keyframes fade {
+      from { opacity: 0.3; }
+      to { opacity: 1; }
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      text-align: center;
+      gap: 24px;
+    }
+    .hero h2 {
+      font-size: 42px;
+      margin: 0;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+    .btn {
+      background: var(--fgna-gold);
+      color: black;
+      padding: 12px 24px;
+      font-weight: bold;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn:hover {
+      background: #b5974e;
+      transform: translateY(-2px);
+    }
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .card {
+      background: #ffffff;
+      color: #000;
+      border-left: 6px solid var(--fgna-blue);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      min-width: 260px;
+      flex: 1;
+    }
+    footer {
+      background: var(--fgna-blue);
+      color: #ccc;
+      text-align: center;
+      padding: 16px 0;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div style="display: flex; align-items: center;">
+    <img src="FGNA-logo.jpeg" alt="FGNA Logo">
+    <h1>Federal Gang & Narcotics Agency</h1>
+  </div>
+</header>
+
+<nav>
+  <a href="javascript:void(0)" onclick="showSlide(1)">Home</a>
+  <a href="javascript:void(0)" onclick="showSlide(2)">Divisions</a>
+  <a href="javascript:void(0)" onclick="showSlide(3)">Documents</a>
+  <a href="javascript:void(0)" onclick="showSlide(4)">COC</a>
+</nav>
+
+<div class="slideshow-container">
+  <!-- Slide 1: Home -->
+  <section class="slide slide-active" id="slide1" style="background: url('slide1.jpg') center/cover no-repeat;">
+    <div class="hero">
+      <h2>Welcome to FGNA</h2>
+      <p>Federal Gang & Narcotics Agency: Protecting our streets, dismantling organized crime.</p>
+      <button class="btn" onclick="showSlide(2)">View Our Divisions</button>
+    </div>
+  </section>
+
+  <!-- Slide 2: Divisions -->
+  <section class="slide" id="slide2" style="background-color: #102c4e;">
+    <div class="hero">
+      <h2>Operational Divisions</h2>
+      <div class="card-grid">
+        <div class="card"><h3>ACU – Air Unit</h3><p>Oversees aerial surveillance and pursuit missions.</p></div>
+        <div class="card"><h3>GIU – Gang Investigations Unit</h3><p>Leads intelligence on organized gang activity.</p></div>
+        <div class="card"><h3>S.E.R.T – Special Emergency Response Team</h3><p>Executes high-risk tactical operations.</p></div>
+        <div class="card"><h3>K9 Unit</h3><p>Conducts narcotics tracking and suspect apprehension with trained dogs.</p></div>
+      </div>
+      <button class="btn" onclick="showSlide(3)">Next: Documents</button>
+    </div>
+  </section>
+
+  <!-- Slide 3: Documents -->
+  <section class="slide" id="slide3" style="background-color: #1a3a5f;">
+    <div class="hero">
+      <h2>Documents & Resources</h2>
+      <div style="background:#fff; color:#000; padding:20px; border-radius:10px; max-width:800px; width:100%;">
+        <ul style="list-style:none; padding:0; font-size:18px;">
+          <li><a class="doc-link" href="FGNA_SOP_2025.pdf" target="_blank">📝 Standard Operating Procedures</a></li>
+          <li><a class="doc-link" href="FGNA_Field_Manual.pdf" target="_blank">📘 Field Manual</a></li>
+          <li><a class="doc-link" href="FGNA_Join_Application.pdf" target="_blank">📄 Join Application</a></li>
+          <li><a class="doc-link" href="FGNA_Incident_Report.pdf" target="_blank">📊 Incident Report</a></li>
+        </ul>
+      </div>
+      <button class="btn" onclick="showSlide(4)">Next: Chain of Command</button>
+    </div>
+  </section>
+
+  <!-- Slide 4: Chain of Command -->
+  <section class="slide" id="slide4" style="background-color: #0b1e3f;">
+    <div class="hero">
+      <h2>Chain of Command</h2>
+      <div class="card-grid">
+        <div class="card"><h3>01. James E.</h3><p>Director</p></div>
+        <div class="card"><h3>02. N/A</h3><p>Deputy Director</p></div>
+        <div class="card"><h3>03. N/A</h3><p>Assistant Director</p></div>
+        <div class="card"><h3>04. N/A</h3><p>Executive Director</p></div>
+        <div class="card"><h3>05. S. Chase</h3><p>Chief of Staff</p></div>
+      </div>
+      <button class="btn" onclick="showSlide(1)">Return Home</button>
+    </div>
+  </section>
+</div>
+
+<footer>
+  &copy; 2025 Federal Gang & Narcotics Agency. All rights reserved.
+</footer>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let current = 0;
+  function showSlide(n) {
+    slides[current].classList.remove('slide-active');
+    current = (n - 1 + slides.length) % slides.length;
+    slides[current].classList.add('slide-active');
+  }
+</script>
+
+</body>
+</html>
