@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FGNA - Federal Gang & Narcotics Agency</title>
+<style>
+  /* CHP style inspired color scheme and fonts */
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #1a2e44;
+  }
+  header {
+    background-color: #003366; /* dark navy */
+    color: #ffc72c; /* gold */
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+  }
+  header img {
+    height: 48px;
+    margin-right: 16px;
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+  nav {
+    background-color: #0055a5;
+    display: flex;
+    justify-content: center;
+  }
+  nav a {
+    color: #ffc72c;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  nav a:hover,
+  nav a.active {
+    background-color: #ffc72c;
+    color: #003366;
+  }
+  main {
+    max-width: 960px;
+    margin: 24px auto;
+    padding: 0 16px 48px;
+  }
+  section {
+    margin-bottom: 48px;
+  }
+  h2 {
+    border-bottom: 3px solid #ffc72c;
+    padding-bottom: 8px;
+    color: #003366;
+  }
+  /* Documents links styling */
+  .doc-category {
+    margin-top: 12px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #004080;
+  }
+  .doc-category a {
+    color: #004080;
+    text-decoration: none;
+  }
+  .doc-category a:hover {
+    text-decoration: underline;
+  }
+  /* Chain of Command table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+  }
+  th, td {
+    text-align: left;
+    padding: 8px 12px;
+    border-bottom: 1px solid #ccc;
+  }
+  th {
+    background-color: #e0e7ef;
+    color: #003366;
+  }
+  /* Sub-Divisions cards */
+  .division {
+    background-color: white;
+    border: 1px solid #c0c7d1;
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+  .division h3 {
+    margin-top: 0;
+    color: #003366;
+  }
+  /* Retired High Command */
+  .retired-command {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .retired-item {
+    background: white;
+    border: 1px solid #c0c7d1;
+    border-radius: 6px;
+    padding: 16px;
+    width: 260px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .retired-item img {
+    max-width: 120px;
+    margin-bottom: 12px;
+  }
+  /* Dept Picture placeholder */
+  #dept-pic-container {
+    margin: 16px 0;
+    text-align: center;
+  }
+  #dept-pic-container img {
+    max-width: 100%;
+    max-height: 240px;
+    border-radius: 8px;
+    border: 2px solid #003366;
+  }
+  #upload-label {
+    display: inline-block;
+    margin-top: 12px;
+    cursor: pointer;
+    color: #003366;
+    font-weight: 600;
+    border: 1px solid #003366;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: #ffc72c;
+  }
+  #dept-pic-input {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/California_Highway_Patrol_patch.svg/1200px-California_Highway_Patrol_patch.svg.png" alt="FGNA Badge" />
+  <h1>Federal Gang & Narcotics Agency (FGNA)</h1>
+</header>
+
+<nav>
+  <a href="#home" class="active">Home</a>
+  <a href="#documents">Documents</a>
+  <a href="#chain-of-command">Chain of Command</a>
+  <a href="#sub-divisions">Sub-Divisions</a>
+  <a href="#retired-high-command">Retired High Command</a>
+</nav>
+
+<main>
+
+<section id="home">
+  <h2>Welcome to FGNA</h2>
+  <p><strong>Mission Statement:</strong> To dismantle organized crime and suppress illegal narcotics operations nationwide with integrity and professionalism.</p>
+  <p><strong>Agency Motto:</strong> "Justice Through Strength and Honor."</p>
+
+  <div id="dept-pic-container">
+    <img id="dept-pic" src="https://via.placeholder.com/800x200?text=Department+Picture+Placeholder" alt="Department Picture" />
+    <br />
+    <label for="dept-pic-input" id="upload-label">Upload Department Picture</label>
+    <input type="file" id="dept-pic-input" accept="image/*" />
+  </div>
+</section>
+
+<section id="documents">
+  <h2>Documents</h2>
+  <p>This section provides access to official FGNA documentation including SOPs, master rosters, promotion requirements, and authority matrices.</p>
+
+  <div class="doc-category">
+    <a href="https://docs.google.com/document/d/1Pmz_2RvG_CVEO8Ov0OvjX6JuzsOBMdjLbq1RwVfT9Wk/edit?tab=t.0" target="_blank" rel="noopener">SOPs (Standard Operating Procedures)</a>
+  </div>
+  <div class="doc-category">
+    <a href="https://docs.google.com/spreadsheets/d/1VGSleC9unKZ-omx2tNOVjsFkIfRpyJBrzURl8NFCxoI/edit?gid=1806289706" target="_blank" rel="noopener">Master Roster</a>
+  </div>
+  <div class="doc-category">
+    <a href="https://docs.google.com/document/d/1ojEmUthGjsarpVyv7rLkYZbANvjVUMNeeBWs6Es_irI/edit?tab=t.0" target="_blank" rel="noopener">Promotion Requirements</a>
+  </div>
+  <div class="doc-category">
+    <a href="https://docs.google.com/spreadsheets/d/1_B5XA4ZVViWkCIcfdZb0uCS7Vl10Mz3LpjtYAZGJFUQ/edit?gid=0" target="_blank" rel="noopener">Authority Matrix</a>
+  </div>
+</section>
+
+<section id="chain-of-command">
+  <h2>Chain of Command</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Rank Order</th>
+        <th>Position</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>01</td><td>Director</td><td>James. E</td></tr>
+      <tr><td>02</td><td>Deputy Director</td><td>N/A</td></tr>
+      <tr><td>03</td><td>Assistant Director</td><td>N/A</td></tr>
+      <tr><td>04</td><td>Executive Director</td><td>N/A</td></tr>
+      <tr><td>05</td><td>Chief of Staff</td><td>S. Chase</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="sub-divisions">
+  <h2>Sub-Divisions</h2>
+
+  <div class="division">
+    <h3>ACU — Air Coastal Unit</h3>
+    <p>The Air Coastal Unit provides aerial and maritime support for FGNA operations, extending surveillance and enforcement capabilities across coastal zones and inland waterways.</p>
+    <p><strong>Focus:</strong> Aerial reconnaissance & coastal patrol</p>
+    <p><strong>Operations:</strong> Aerial surveillance, waterway interdictions, air support during operations</p>
+    <p><strong>Personnel:</strong> Licensed pilots, drone operators, maritime agents</p>
+    <p><strong>Lead:</strong> TBD</p>
+  </div>
+
+  <div class="division">
+    <h3>GIU — Gang Investigation Unit</h3>
+    <p>The Gang Investigation Unit leads long-term investigative efforts into organized gang activity, working to identify, infiltrate, and dismantle criminal networks.</p>
+    <p><strong>Focus:</strong> Gang structure, affiliations, and organized activity</p>
+    <p><strong>Operations:</strong> Undercover ops, gang mapping, affiliations tracking, evidence collection</p>
+    <p><strong>Personnel:</strong> Case agents, field operatives, intelligence specialists</p>
+    <p><strong>Overseer:</strong> J. Price</p>
+  </div>
+
+  <div class="division">
+    <h3>K9 — Canine Division</h3>
+    <p>The K9 Division provides essential detection and tracking capabilities, supporting narcotics, weapon, and search operations with trained working dogs.</p>
+    <p><strong>Focus:</strong> Detection and tracking</p>
+    <p><strong>Operations:</strong> Drug/bomb detection, suspect tracking, area sweeps</p>
+    <p><strong>Personnel:</strong> Certified K9 handlers and service dogs</p>
+    <p><strong>01 (Lead):</strong> T. Berd</p>
+  </div>
+
+  <div class="division">
+    <h3>SERT — Special Emergency Response Team</h3>
+    <p>SERT is FGNA’s tactical division, responsible for high-risk warrants, hostage rescues, and active threat neutralization.</p>
+    <p><strong>Focus:</strong> Tactical and emergency response</p>
+    <p><strong>Operations:</strong> High-risk raids, crisis response, breaching</p>
+    <p><strong>Personnel:</strong> Highly trained tactical operators</p>
+    <p><strong>Overseer:</strong> W. Dan</p>
+  </div>
+</section>
+
+<section id="retired-high-command">
+  <h2>Retired High Command</h2>
+  <div class="retired-command">
+
+    <div class="retired-item">
+      <img src="https://via.placeholder.com/120x120?text=Retired+Director+Badge" alt="Retired Director Badge" />
+      <h4>John. M</h4>
+      <p>Retired Director</p>
+    </div>
+
+    <div class="retired-item">
+      <img src="https://via.placeholder.com/120x120?text=Retired+Assistant+Director+Badge" alt="Retired Assistant Director Badge" />
+      <h4>W. Dan</h4>
+      <p>Retired Assistant Director</p>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  // Upload and preview department picture
+  const deptPicInput = document.getElementById('dept-pic-input');
+  const deptPic = document.getElementById('dept-pic');
+
+  deptPicInput.addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (file && file.type.startsWith('image/')) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        deptPic.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+
+  // Navigation link active state switch
+  const navLinks = document.querySelectorAll('nav a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
